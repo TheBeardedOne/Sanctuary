@@ -20,11 +20,11 @@
      
     if(Physics.Raycast (transform.position,transform.forward, hit, 5)) {
     Debug.Log("First Spot");
-    if(hit.collider.gameObject && Input.GetMouseButtonDown(0) && grabObj == false){
+    if(hit.collider.gameObject && Input.GetMouseButton(0) && grabObj == false){
     Debug.Log("POOP");
     hitObj = hit.collider.gameObject;
     grabObj = true;
-    }else if(Input.GetMouseButtonDown(0) && grabObj == true){
+    }else {
     grabObj = false;
     }
      
@@ -32,10 +32,11 @@
      
     if(grabObj){
     //Moving object with player, 2 units in front of him cause we want to see it.
-    hitObj.transform.position.x = gameObject.transform.position.x;
-    hitObj.transform.position.y = gameObject.transform.position.y;
-    hitObj.transform.position.z = gameObject.transform.position.z+2;
+    hitObj.transform.position.x = gameObject.transform.localPosition.x;
+    hitObj.transform.position.y = gameObject.transform.localPosition.y;
+    hitObj.transform.position.z = gameObject.transform.localPosition.z+2;
     }
+    
     // =====================================================================
     var controller : CharacterController = GetComponent(CharacterController);
      
