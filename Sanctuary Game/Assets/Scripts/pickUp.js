@@ -18,23 +18,34 @@
      
     function Update() {
      
-    if(Physics.Raycast (transform.position,transform.forward, hit, 5)) {
-    Debug.Log("First Spot");
-    if(hit.collider.gameObject && Input.GetMouseButton(0) && grabObj == false){
-    Debug.Log("POOP");
-    hitObj = hit.collider.gameObject;
-    grabObj = true;
-    }else {
-    grabObj = false;
-    }
      
+    if(Input.GetMouseButtonDown(0)){
+    
+		//THIS needs to be verified first.     
+   		 if(grabObj == true){
+    		Debug.Log("Object detached");
+    		hitObj.rigidbody.isKinematic = false;
+    		grabObj = false;
+    	}
+    	
+    	if(Physics.Raycast (gameObject.transform.position,gameObject.transform.forward, hit, 5)) {
+    		Debug.Log("Raycast Hit");
+    		if(hit.collider.gameObject && grabObj == false){
+   				 Debug.Log("Object Verified");
+   				 hitObj = hit.collider.gameObject;
+   				 
+   				
+    			//hitObj.transform.position.y = gameObject.transform.position.y;
+    			//hitObj.transform.position.z = gameObject.transform.position.z+0.01f;
+    			hitObj.transform.parent = gameObject.transform;
+    			hitObj.rigidbody.isKinematic = true;
+    			 grabObj = true;
+    		}
+    	}
     }
-     
     if(grabObj){
     //Moving object with player, 2 units in front of him cause we want to see it.
-    hitObj.transform.position.x = gameObject.transform.localPosition.x;
-    hitObj.transform.position.y = gameObject.transform.localPosition.y;
-    hitObj.transform.position.z = gameObject.transform.localPosition.z+2;
+    
     }
     
     // =====================================================================

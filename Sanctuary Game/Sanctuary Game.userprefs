@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GUICrosshair.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Mommy\Assets\Scripts\PlayerInteract.cs">
     <Files>
-      <File FileName="Assets\GUICrosshair.js" Line="18" Column="2" />
-      <File FileName="Assets\GUICrosshair.js" Line="7" Column="2" />
+      <File FileName="..\..\Mommy\Assets\Scripts\PlayerInteract.cs" Line="15" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
