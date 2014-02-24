@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\pickUp.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GUICrosshair.js">
     <Files>
-      <File FileName="Assets\pickUp.js" Line="35" Column="5" />
+      <File FileName="Assets\GUICrosshair.js" Line="18" Column="2" />
+      <File FileName="Assets\GUICrosshair.js" Line="7" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
