@@ -24,7 +24,6 @@ public class pullLever : MonoBehaviour {
 		if (pulled == true) {
 			this.animation.Play("leverPull");
 			if(this.gameObject.name == "Lswitch"){
-				Debug.Log ("yes");
 				leftWall.animation.Play("leftCaveWall");
 			}
 			else{rightWall.animation.Play("rightCaveWall");}

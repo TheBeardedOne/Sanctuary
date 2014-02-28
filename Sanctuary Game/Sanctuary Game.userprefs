@@ -1,12 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\pullLever.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\openDoor.cs">
     <Files>
-      <File FileName="Assets\pullLever.cs" Line="22" Column="77" />
-      <File FileName="Assets\pullLever.cs" Line="51" Column="1" />
-      <File FileName="Assets\openDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\respawnAtCheckpoint.cs" Line="1" Column="1" />
-      <File FileName="Assets\playerInteract.cs" Line="1" Column="1" />
+      <File FileName="Assets\pullLever.cs" Line="17" Column="3" />
+      <File FileName="Assets\openDoor.cs" Line="32" Column="34" />
+      <File FileName="Assets\respawnAtCheckpoint.cs" Line="6" Column="16" />
+      <File FileName="Assets\playerInteract.cs" Line="19" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
