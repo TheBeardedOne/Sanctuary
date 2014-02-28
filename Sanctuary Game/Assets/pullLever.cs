@@ -8,11 +8,13 @@ public class pullLever : MonoBehaviour {
 	public GameObject rightWall;
 	
 	// Use this for initialization
+	// Identifies the lever animation and sets it to play once
+	// Identifies the wall platforms and sets their animation to play only once
 	void Start () {
 		thePlayer = null;
 		pulled = false;
-		leftWall = GameObject.Find ("Wall_Left");
-		rightWall = GameObject.Find ("Wall_Right");
+		leftWall = GameObject.Find ("Wall_left");
+		rightWall = GameObject.Find ("Wall_right");
 		this.animation ["leverPull"].wrapMode = WrapMode.ClampForever;
 		leftWall.animation ["leftCaveWall"].wrapMode = WrapMode.ClampForever;
 		rightWall.animation ["rightCaveWall"].wrapMode = WrapMode.ClampForever;
