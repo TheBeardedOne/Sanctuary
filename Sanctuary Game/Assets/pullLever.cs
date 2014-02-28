@@ -4,18 +4,30 @@ using System.Collections;
 public class pullLever : MonoBehaviour {
 	public Collider thePlayer;
 	public bool pulled;
+	public GameObject leftWall;
+	public GameObject rightWall;
 	
 	// Use this for initialization
 	void Start () {
 		thePlayer = null;
 		pulled = false;
+		leftWall = GameObject.Find ("Wall_Left");
+		rightWall = GameObject.Find ("Wall_Right");
 		this.animation ["leverPull"].wrapMode = WrapMode.ClampForever;
+		leftWall.animation ["leftCaveWall"].wrapMode = WrapMode.ClampForever;
+		rightWall.animation ["rightCaveWall"].wrapMode = WrapMode.ClampForever;
 	}
 	
-	// Update is called once per frame
+	// If the lever is being pulled, play the lever animation
+	// Also checks which lever it is and plays the corresponding wall animation
 	void Update () {
 		if (pulled == true) {
 			this.animation.Play("leverPull");
+			if(this.gameObject.name == "Lswitch"){
+				Debug.Log ("yes");
+				leftWall.animation.Play("leftCaveWall");
+			}
+			else{rightWall.animation.Play("rightCaveWall");}
 		}
 	}
 	
