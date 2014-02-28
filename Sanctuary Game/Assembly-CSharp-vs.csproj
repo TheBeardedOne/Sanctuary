@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\openDoor.cs" />
      <Compile Include="Assets\playerInteract.cs" />
+     <Compile Include="Assets\pullLever.cs" />
      <Compile Include="Assets\respawnAtCheckpoint.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
