@@ -35,7 +35,6 @@ public class openDoor : MonoBehaviour {
 			thePlayer = other;
 			keyHold = keyFind.isHolding;
 		}
-		Debug.Log (keyFind);
 	}
 
 	// If the first person controller is within the trigger range while holding the key

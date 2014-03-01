@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\OpenLvl2.cs" />
      <Compile Include="Assets\movePlatforms.cs" />
      <Compile Include="Assets\openDoor.cs" />
      <Compile Include="Assets\playerInteract.cs" />
