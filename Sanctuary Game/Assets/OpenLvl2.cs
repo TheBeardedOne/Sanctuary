@@ -25,7 +25,7 @@ public class OpenLvl2 : MonoBehaviour {
 		holdStone = null;
 		door = GameObject.Find ("Level 1 Door");
 		gear = GameObject.Find ("3_gears");
-		stone = GameObject.Find ("Orange_stonePlHld");
+		stone = GameObject.Find ("Orange_stone");
 		door.animation ["caveDoorAnim"].wrapMode = WrapMode.ClampForever;
 		gear.animation ["gearsAnim"].wrapMode = WrapMode.ClampForever;
 		stone.animation ["stoneOneInsert"].wrapMode = WrapMode.ClampForever;
@@ -36,6 +36,7 @@ public class OpenLvl2 : MonoBehaviour {
 		if (activate == true) {
 			door.animation.Play();
 			gear.animation.Play();
+			stone.animation.Play();
 		}
 	}
 	
@@ -57,7 +58,6 @@ public class OpenLvl2 : MonoBehaviour {
 				if(Input.GetMouseButtonDown (0)){
 					if(holdStone.gameObject.name == "Orange_stone"){
 						activate = true;
-						stone.animation.Play();
 					}
 				}
 			}
