@@ -6,6 +6,7 @@ using System.Collections;
 public class playerInteract: MonoBehaviour {
 	public Transform hitObject;
 	public bool isHolding;
+	public GameObject fireSet;
 	RaycastHit hit;
 	
 	
@@ -14,6 +15,8 @@ public class playerInteract: MonoBehaviour {
 		//Reset our variables when the game starts
 		hitObject = null;
 		isHolding = false;
+		fireSet = GameObject.Find("Flame");
+		fireSet.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -39,6 +42,9 @@ public class playerInteract: MonoBehaviour {
 						isHolding = true;
 						hitObject = hit.collider.gameObject.transform;
 					}
+					if(hit.collider.gameObject.tag == "Fire"){
+						Debug.Log ("fire");
+						fireSet.SetActive (true);					}
 				}
 			}
 			//If the grab key is pressed and an object is held, drop it
