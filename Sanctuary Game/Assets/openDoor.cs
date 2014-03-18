@@ -15,7 +15,7 @@ public class openDoor : MonoBehaviour {
 	void Start () {
 		thePlayer = null;
 		open = false;
-		scriptFind = GameObject.Find ("Main Camera").GetComponent<Camera>();;
+		scriptFind = GameObject.Find ("Main Camera").GetComponent<Camera>();
 		keyFind = scriptFind.GetComponent<playerInteract>();
 		keyHold = false;
 		this.animation ["cabinDoorAnim"].wrapMode = WrapMode.ClampForever;

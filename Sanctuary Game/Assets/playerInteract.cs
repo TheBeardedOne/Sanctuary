@@ -27,9 +27,15 @@ public class playerInteract: MonoBehaviour {
 		if(Input.GetMouseButtonDown(0)){
 			//If the player presses the grab key and is not holding an object, raycast to see if one is in range
 			if(isHolding == false){
-				if(Physics.Raycast(transform.position, transform.forward, out hit, 5.0f, layerMask)){
+				Debug.DrawRay(transform.forward, hit.point, Color.green);
+				Debug.DrawRay( transform.position, hit.point, Color.white, 5 );
+				Debug.DrawRay( transform.position, hit.point+ transform.forward, Color.red, 5 );
+
+				if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f, layerMask)){
+					Debug.Log ("entered raycast");
 					//If we hit a grabbable object, store a reference to that object if it has been tagged as Grabbable
 					if(hit.collider.gameObject.tag == "GrabbableObject"){
+						Debug.Log ("object hit");
 						isHolding = true;
 						hitObject = hit.collider.gameObject.transform;
 					}
