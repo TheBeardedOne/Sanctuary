@@ -46,12 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\OpenLvl2.cs" />
-     <Compile Include="Assets\movePlatforms.cs" />
-     <Compile Include="Assets\openDoor.cs" />
-     <Compile Include="Assets\playerInteract.cs" />
-     <Compile Include="Assets\pullLever.cs" />
-     <Compile Include="Assets\respawnAtCheckpoint.cs" />
+     <Compile Include="Assets\Scripts\OpenLvl2.cs" />
+     <Compile Include="Assets\Scripts\mainMenuScript.cs" />
+     <Compile Include="Assets\Scripts\movePlatforms.cs" />
+     <Compile Include="Assets\Scripts\openDoor.cs" />
+     <Compile Include="Assets\Scripts\playerInteract.cs" />
+     <Compile Include="Assets\Scripts\pullLever.cs" />
+     <Compile Include="Assets\Scripts\respawnAtCheckpoint.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
