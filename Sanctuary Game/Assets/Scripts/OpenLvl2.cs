@@ -28,7 +28,7 @@ public class OpenLvl2 : MonoBehaviour {
 		stone = GameObject.Find ("Orange_stone");
 		door.animation ["caveDoorAnim"].wrapMode = WrapMode.ClampForever;
 		gear.animation ["gearsAnim"].wrapMode = WrapMode.ClampForever;
-		stone.animation ["stoneOneInsert"].wrapMode = WrapMode.ClampForever;
+		//stone.animation ["stoneOneInsert"].wrapMode = WrapMode.ClampForever;
 	}
 	
 	// If the door is set to open, play the animation
@@ -36,7 +36,7 @@ public class OpenLvl2 : MonoBehaviour {
 		if (activate == true) {
 			door.animation.Play();
 			gear.animation.Play();
-			stone.animation.Play();
+			//stone.animation.Play();
 		}
 	}
 	
