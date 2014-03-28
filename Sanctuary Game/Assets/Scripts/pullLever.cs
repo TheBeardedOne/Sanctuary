@@ -6,8 +6,6 @@ public class pullLever : MonoBehaviour {
 	public bool pulled;
 	public GameObject leftWall;
 	public GameObject rightWall;
-	public GameObject plat1;
-	public GameObject plat2;
 	
 	// Use this for initialization
 	// Identifies the lever animation and sets it to play once
@@ -17,13 +15,9 @@ public class pullLever : MonoBehaviour {
 		pulled = false;
 		leftWall = GameObject.Find ("Wall_left");
 		rightWall = GameObject.Find ("Wall_right");
-		plat1 = GameObject.Find ("thirdPlat1");
-		plat2 = GameObject.Find ("thirdPlat3");
 		this.animation ["leverPull"].wrapMode = WrapMode.ClampForever;
 		leftWall.animation ["leftCaveWall"].wrapMode = WrapMode.ClampForever;
 		rightWall.animation ["rightCaveWall"].wrapMode = WrapMode.ClampForever;
-		plat1.animation ["firstStep"].wrapMode = WrapMode.Loop;
-		plat2.animation ["secondStep"].wrapMode = WrapMode.Loop;
 	}
 	
 	// If the lever is being pulled, play the lever animation
@@ -34,15 +28,7 @@ public class pullLever : MonoBehaviour {
 			if(this.gameObject.name == "Lswitch"){
 				leftWall.animation.Play("leftCaveWall");
 			}
-			else if(this.gameObject.name == "Rswitch"){
-				rightWall.animation.Play("rightCaveWall");
-			}
-			else if(this.gameObject.name == "floorSwitch"){
-				plat1.animation.Play("firstStep");
-			}
-			else if(this.gameObject.name == "platformSwitch"){
-				plat2.animation.Play ("secondStep");
-			}
+			else{rightWall.animation.Play("rightCaveWall");}
 		}
 	}
 	

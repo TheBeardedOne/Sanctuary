@@ -63,7 +63,7 @@ public class OpenLvl3 : MonoBehaviour {
 	void OnTriggerStay(){
 		if (playerController != null) {
 			curHold = holder.hitObject;
-			if (curHold) {
+			if (holding) {
 				if(Input.GetMouseButtonDown (0)){
 					if(this.gameObject.name == "Orange_slot_lvl2" && curHold.gameObject.name == "Orange_stone"){
 						GameObject.Find("Orange_stone").SetActive(false);
