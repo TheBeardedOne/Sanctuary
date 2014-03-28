@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\respawnAtCheckpoint.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CabinVanish.cs">
     <Files>
-      <File FileName="Assets\Scripts\respawnAtCheckpoint.cs" Line="94" Column="4" />
+      <File FileName="Assets\Scripts\CabinVanish.cs" Line="20" Column="2" />
+      <File FileName="Assets\Scripts\movePlatforms.cs" Line="12" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
