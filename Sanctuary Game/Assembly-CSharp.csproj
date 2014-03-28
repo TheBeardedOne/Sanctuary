@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Highlight_Mouseover.cs" />
      <Compile Include="Assets\Scripts\OpenLvl2.cs" />
      <Compile Include="Assets\Scripts\OpenLvl3.cs" />
+     <Compile Include="Assets\Scripts\gameManager.cs" />
      <Compile Include="Assets\Scripts\lvl3Activation.cs" />
      <Compile Include="Assets\Scripts\mainMenuScript.cs" />
      <Compile Include="Assets\Scripts\movePlatforms.cs" />
