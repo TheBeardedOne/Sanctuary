@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Highlight_Mouseover.cs" />
      <Compile Include="Assets\Scripts\OpenLvl2.cs" />
      <Compile Include="Assets\Scripts\OpenLvl3.cs" />
      <Compile Include="Assets\Scripts\lvl3Activation.cs" />
