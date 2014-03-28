@@ -8,6 +8,10 @@ public class playerInteract: MonoBehaviour {
 	public bool isHolding;
 	public GameObject fireSet;
 	public bool isPaused;
+	public bool keyGet;
+	public bool orngStoneGet;
+	public bool blueStoneGet;
+	public bool grnStoneGet;
 	RaycastHit hit;
 	
 	
@@ -17,6 +21,10 @@ public class playerInteract: MonoBehaviour {
 		hitObject = null;
 		isHolding = false;
 		isPaused = false;
+		keyGet = false;
+		orngStoneGet = false;
+		blueStoneGet = false;
+		grnStoneGet = false;
 		fireSet = GameObject.Find("Flame");
 		fireSet.SetActive (false);
 	}
@@ -69,6 +77,24 @@ public class playerInteract: MonoBehaviour {
 		}
 		//If the object should be held, update it's position
 		if(isHolding == true){
+
+			switch(hitObject.gameObject.name){
+			case "key":
+				keyGet = true;
+				break;
+			case "Orange_stone":
+				orngStoneGet = true;
+				break;
+			case "Blue_stone":
+				blueStoneGet = true;
+				break;
+			case "Green_stone":
+				grnStoneGet = true;
+				break;
+			default:
+				break;
+			}
+
 			hitObject.rigidbody.useGravity = false; 
 			
 			//Attach the object as a child to the camera
