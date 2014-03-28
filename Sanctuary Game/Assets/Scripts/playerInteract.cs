@@ -5,6 +5,7 @@ using System.Collections;
 //!!!Must be attached to the Main Camera in First Person
 public class playerInteract: MonoBehaviour {
 	public Transform hitObject;
+	public Transform tempHitObj;
 	public bool isHolding;
 	public GameObject fireSet;
 	public bool isPaused;
@@ -19,6 +20,7 @@ public class playerInteract: MonoBehaviour {
 	void Start () {
 		//Reset our variables when the game starts
 		hitObject = null;
+		tempHitObj = null;
 		isHolding = false;
 		isPaused = false;
 		keyGet = false;
@@ -59,6 +61,8 @@ public class playerInteract: MonoBehaviour {
 
 				if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f, layerMask)){
 					Debug.Log ("entered raycast");
+					tempHitObj = hit.collider.gameObject.transform;
+
 					//If we hit a grabbable object, store a reference to that object if it has been tagged as Grabbable
 					if(hit.collider.gameObject.tag == "GrabbableObject"){
 						Debug.Log ("object hit");
@@ -67,7 +71,8 @@ public class playerInteract: MonoBehaviour {
 					}
 					if(hit.collider.gameObject.tag == "Fire"){
 						Debug.Log ("fire");
-						fireSet.SetActive (true);					}
+						fireSet.SetActive (true);				
+					}
 				}
 			}
 			//If the grab key is pressed and an object is held, drop it

@@ -19,7 +19,7 @@ public class OpenLvl2 : MonoBehaviour {
 	void Start () {
 		thePlayer = null;
 		activate = false;
-		scriptFind = GameObject.Find ("Main Camera").GetComponent<Camera>();;
+		scriptFind = GameObject.Find ("Main Camera").GetComponent<Camera>();
 		holding = scriptFind.GetComponent<playerInteract>();
 		carry = false;
 		holdStone = null;
