@@ -10,6 +10,7 @@ public class lvl3Activation : MonoBehaviour {
 	public Transform isCarrying;
 	public GameObject plat1;
 	public GameObject plat2;
+	public GameObject bridge;
 	public GameObject orngStone;
 	public GameObject bluStone;
 	public GameObject gStone;
@@ -22,21 +23,31 @@ public class lvl3Activation : MonoBehaviour {
 		carrier = scriptHolder.GetComponent<playerInteract>();
 		hold = false;
 		isCarrying = null;
+
+		// Identifying the stones and moving platforms
 		orngStone = GameObject.Find ("Orng_Stone_PlcHldr3");
 		bluStone = GameObject.Find ("Blue_Stone_PlcHldr2");
 		gStone = GameObject.Find ("Grn_Stone_PlcHldr");
 		plat1 = GameObject.Find ("thirdPlat1");
 		plat2 = GameObject.Find ("thirdPlat3");
+		bridge = GameObject.Find ("Bridge_to_Drop");
+
+		// set up whether the animation is to play only once or loop
 		orngStone.animation ["oStoneInsert3"].wrapMode = WrapMode.ClampForever;
 		bluStone.animation ["bStoneInsert2"].wrapMode = WrapMode.ClampForever;
 		gStone.animation ["gStoneInsert"].wrapMode = WrapMode.ClampForever;
 		plat1.animation ["firstStep"].wrapMode = WrapMode.Loop;
 		plat2.animation ["secondStep"].wrapMode = WrapMode.Loop;
+		bridge.animation ["toSanctuary"].wrapMode = WrapMode.ClampForever;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// checks if the animation is set to play
 		if(setAnim){
+			// identifies which slot the current object is
+			// plays the corresponding animation
+			// when the insertion animation is done playing, the corresponding platform animation is played
 			if(this.gameObject.name == "Orange_slot_lvl3"){
 				orngStone.animation.Play("oStoneInsert3");
 				if(orngStone.animation["oStoneInsert3"].time >= orngStone.animation["oStoneInsert3"].length){
@@ -52,14 +63,14 @@ public class lvl3Activation : MonoBehaviour {
 			else if(this.gameObject.name == "Green_slot"){
 				gStone.animation.Play("gStoneInsert");
 				if(gStone.animation["gStoneInsert"].time >= gStone.animation["gStoneInsert"].length){
-					Debug.Log("does something");
+					bridge.animation.Play ("toSanctuary");
 				}
 			}
 		}
 	}
 
 	// Recognizes the first person controller
-	// Sees if the key is being held
+	// Checks whether the player is holding something
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag == "Player") {
 			mover = other;
@@ -67,13 +78,15 @@ public class lvl3Activation : MonoBehaviour {
 		}
 	}
 	
-	// If the first person controller is within the trigger range while holding the key
-	//and mouse is clicked, set the door animation to true
+	// If the first person controller is within the trigger range while holding the stones
+	//and the mouse is clicked, set the animation to be played
 	void OnTriggerStay(){
 		if (mover != null) {
 			isCarrying = carrier.hitObject;
 			if (hold) {
 				if(Input.GetMouseButtonDown (0)){
+					// checks to see if the slot matches with the correct stone
+					// if so, play the insertion animation
 					if(this.gameObject.name == "Orange_slot_lvl3" && isCarrying.gameObject.name == "Orange_stone"){
 						GameObject.Find("Orange_stone").SetActive(false);
 						setAnim = true;

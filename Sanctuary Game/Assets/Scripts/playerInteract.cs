@@ -9,10 +9,13 @@ public class playerInteract: MonoBehaviour {
 	public bool isHolding;
 	public GameObject fireSet;
 	public bool isPaused;
+
+	// boolean for when the key items are collected
 	public bool keyGet;
 	public bool orngStoneGet;
 	public bool blueStoneGet;
 	public bool grnStoneGet;
+
 	RaycastHit hit;
 	
 	
@@ -83,6 +86,7 @@ public class playerInteract: MonoBehaviour {
 		//If the object should be held, update it's position
 		if(isHolding == true){
 
+			// set collected boolean to true when the corresponding item is picked up
 			switch(hitObject.gameObject.name){
 			case "key":
 				keyGet = true;
