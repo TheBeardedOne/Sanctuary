@@ -64,13 +64,15 @@ public class OpenLvl3 : MonoBehaviour {
 		if (playerController != null) {
 			curHold = holder.hitObject;
 			if (holding) {
+
+				//**** Changed "Set active" to false render - Jeremy ****
 				if(Input.GetMouseButtonDown (0)){
 					if(this.gameObject.name == "Orange_slot_lvl2" && curHold.gameObject.name == "Orange_stone"){
-						GameObject.Find("Orange_stone").SetActive(false);
+						GameObject.Find("Orange_stone").renderer.enabled = false;
 						unlock = true;
 					}
 					else if(this.gameObject.name == "Blue_slot" && curHold.gameObject.name == "Blue_stone"){
-						GameObject.Find("Blue_stone").SetActive(false);
+						GameObject.Find("Blue_stone").renderer.enabled = false;
 						unlock = true;
 					}
 				}

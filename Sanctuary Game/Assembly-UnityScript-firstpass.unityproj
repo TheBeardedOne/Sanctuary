@@ -58,15 +58,40 @@
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\DragRigidbody.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-24px.fnt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable32.fnt" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularSmooth.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-12px.fnt" />
+     <None Include="Assets\Daikon Forge\DFGUI\Shaders\Default UI Shader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Shaders\TechBlueShader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-18px.fnt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\title-text.fnt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-SemiBold-56px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\AnimatedSprite\OpenSans-Semibold-18px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\SIL Open Font License.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHue.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Daikon Forge\DFGUI\Shaders\Dynamic Font Shader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColoredCharacterShader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHSB.shader" />
+     <None Include="Assets\Daikon Forge\Resources\Change Log.txt" />
+     <None Include="Assets\Daikon Forge\Examples\Shaders\Radar Sweep Shader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-14px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\OpenSans Font License.txt" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\LCD Font.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-20px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-16px.fnt" />
+ <Reference Include="dfScriptLite">
+ <HintPath>Assets\Daikon Forge\DataBinding\Plugins\dfScriptLite.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

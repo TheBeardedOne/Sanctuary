@@ -59,9 +59,11 @@ public class OpenLvl2 : MonoBehaviour {
 		if (thePlayer != null) {
 			holdStone = holding.hitObject;
 			if (carry) {
+
+				//****Note from Jeremy - Changed it from being set to active to renderer being disabled. I cannot find an object that is set to active.****
 				if(Input.GetMouseButtonDown (0)){
 					if(holdStone.gameObject.name == "Orange_stone"){
-						GameObject.Find("Orange_stone").SetActive(false);
+						GameObject.Find("Orange_stone").renderer.enabled = false;
 						activate = true;
 					}
 				}

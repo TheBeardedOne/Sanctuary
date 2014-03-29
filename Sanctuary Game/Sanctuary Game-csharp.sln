@@ -5,6 +5,8 @@ Project("{25F0785B-E7BC-B1D8-8DB4-89C1302CF333}") = "Sanctuary Game", "Assembly-
 EndProject
 Project("{25F0785B-E7BC-B1D8-8DB4-89C1302CF333}") = "Sanctuary Game", "Assembly-CSharp-vs.csproj", "{959D05DF-FF0A-DAE6-E69B-8D673E4D7BE7}"
 EndProject
+Project("{25F0785B-E7BC-B1D8-8DB4-89C1302CF333}") = "Sanctuary Game", "Assembly-CSharp-Editor-vs.csproj", "{33F17678-A1AD-6441-3FA9-838280AE99A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{959D05DF-FF0A-DAE6-E69B-8D673E4D7BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{959D05DF-FF0A-DAE6-E69B-8D673E4D7BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{959D05DF-FF0A-DAE6-E69B-8D673E4D7BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F17678-A1AD-6441-3FA9-838280AE99A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F17678-A1AD-6441-3FA9-838280AE99A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F17678-A1AD-6441-3FA9-838280AE99A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F17678-A1AD-6441-3FA9-838280AE99A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																															GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

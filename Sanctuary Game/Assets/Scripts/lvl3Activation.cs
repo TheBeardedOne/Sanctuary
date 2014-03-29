@@ -87,16 +87,18 @@ public class lvl3Activation : MonoBehaviour {
 				if(Input.GetMouseButtonDown (0)){
 					// checks to see if the slot matches with the correct stone
 					// if so, play the insertion animation
+
+					//**** Changed to un render instead of set to active - Jeremy ****
 					if(this.gameObject.name == "Orange_slot_lvl3" && isCarrying.gameObject.name == "Orange_stone"){
-						GameObject.Find("Orange_stone").SetActive(false);
+						GameObject.Find("Orange_stone").renderer.enabled = false;
 						setAnim = true;
 					}
 					else if(this.gameObject.name == "Blue_slot_lvl3" && isCarrying.gameObject.name == "Blue_stone"){
-						GameObject.Find("Blue_stone").SetActive(false);
+						GameObject.Find("Blue_stone").renderer.enabled = false;
 						setAnim = true;
 					}
 					else if(this.gameObject.name == "Green_slot" && isCarrying.gameObject.name == "Green_stone"){
-						GameObject.Find("Green_stone").SetActive(false);
+						GameObject.Find("Green_stone").renderer.enabled = false;
 						setAnim = true;
 					}
 				}

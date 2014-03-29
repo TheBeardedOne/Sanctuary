@@ -55,6 +55,7 @@ public class playerInteract: MonoBehaviour {
 			}
 		}
 
+
 		if(Input.GetMouseButtonDown(0)){
 			//If the player presses the grab key and is not holding an object, raycast to see if one is in range
 			if(isHolding == false){
@@ -88,17 +89,29 @@ public class playerInteract: MonoBehaviour {
 
 			// set collected boolean to true when the corresponding item is picked up
 			switch(hitObject.gameObject.name){
-			case "key":
+			case "Key":
 				keyGet = true;
+				GameObject.Find("Button_4").GetComponent<dfButton> ().NormalBackgroundColor = Color.white;
+				GameObject.Find("Button_4").GetComponent<guiButtonBehaviour>().pickedUpKey = true;
 				break;
 			case "Orange_stone":
 				orngStoneGet = true;
+				//hitObject = hit.collider.gameObject.transform;
+				GameObject.Find("Button_1").GetComponent<dfButton> ().NormalBackgroundColor = Color.white;
+				GameObject.Find("Button_1").GetComponent<guiButtonBehaviour>().pickedUpOrange = true;
+				recallStoneOrange();
 				break;
 			case "Blue_stone":
 				blueStoneGet = true;
+				GameObject.Find("Button_2").GetComponent<dfButton> ().NormalBackgroundColor = Color.white;
+				GameObject.Find("Button_2").GetComponent<guiButtonBehaviour>().pickedUpBlue = true;
+				recallStoneBlue();
 				break;
 			case "Green_stone":
 				grnStoneGet = true;
+				GameObject.Find("Button_3").GetComponent<dfButton> ().NormalBackgroundColor = Color.white;
+				GameObject.Find("Button_3").GetComponent<guiButtonBehaviour>().pickedUpGreen = true;
+				recallStoneGreen();
 				break;
 			default:
 				break;
@@ -120,4 +133,66 @@ public class playerInteract: MonoBehaviour {
 			hitObject = null;
 		}
 	}
+
+	// FUNCTIONS TO RECALL STONE (This could be cleaner, but honestly I'm runnign outta time!!)
+	void recallStoneOrange(){
+		Debug.Log("Entered FUNCTION Orange");
+		isHolding = true;
+		hitObject = GameObject.Find ("Orange_stone").gameObject.transform;
+
+		hitObject.rigidbody.useGravity = false; 
+		
+		//Attach the object as a child to the camera
+		hitObject.parent = this.transform;
+		
+		//Change the final int to change distance from camera
+		hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
+		hitObject.transform.rotation = this.transform.rotation; 
+	}
+
+	void recallStoneBlue(){
+		Debug.Log("Entered FUNCTION Blue");
+		isHolding = true;
+		hitObject = GameObject.Find ("Blue_stone").gameObject.transform;
+		
+		hitObject.rigidbody.useGravity = false; 
+		
+		//Attach the object as a child to the camera
+		hitObject.parent = this.transform;
+		
+		//Change the final int to change distance from camera
+		hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
+		hitObject.transform.rotation = this.transform.rotation; 
+	}
+
+	void recallStoneGreen(){
+		Debug.Log("Entered FUNCTION Green");
+		isHolding = true;
+		hitObject = GameObject.Find ("Green_stone").gameObject.transform;
+		
+		hitObject.rigidbody.useGravity = false; 
+		
+		//Attach the object as a child to the camera
+		hitObject.parent = this.transform;
+		
+		//Change the final int to change distance from camera
+		hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
+		hitObject.transform.rotation = this.transform.rotation; 
+	}
+
+	void recallStoneKey(){
+		Debug.Log("Entered FUNCTION Key");
+		isHolding = true;
+		hitObject = GameObject.Find ("Key").gameObject.transform;
+		
+		hitObject.rigidbody.useGravity = false; 
+		
+		//Attach the object as a child to the camera
+		hitObject.parent = this.transform;
+		
+		//Change the final int to change distance from camera
+		hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
+		hitObject.transform.rotation = this.transform.rotation; 
+	}
+
 }
