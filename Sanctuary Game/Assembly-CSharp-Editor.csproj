@@ -133,6 +133,7 @@
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColoredCharacterShader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHSB.shader" />
      <None Include="Assets\Daikon Forge\Resources\Change Log.txt" />
+     <None Include="Assets\Scripts\ShaderLab - 3DText.shader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Shaders\Radar Sweep Shader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-14px.fnt" />
      <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable.fnt" />
