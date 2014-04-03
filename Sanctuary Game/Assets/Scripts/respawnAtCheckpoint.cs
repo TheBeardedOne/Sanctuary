@@ -57,17 +57,17 @@ public class respawnAtCheckpoint : MonoBehaviour {
 		}
 		// checks if the player has collect the first stone (orange)
 		else if (holder.orngStoneGet){
-			// sets checkpoint to the entrance of the cave
-			if(inCave){
-				xpos = -0.5f;
-				ypos = 50;
-				zpos = 138;
-			}
 			// sets checkpoint at start of level 3
-			else if(pastCave){
+			if(pastCave){
 				xpos = -0.7f;
 				ypos = 55.5f;
 				zpos = 367;
+			}
+			// sets checkpoint to the entrance of the cave
+			else if(inCave){
+				xpos = -0.5f;
+				ypos = 50;
+				zpos = 138;
 			}
 			// first checkpoint at where the orange stone is collected
 			else{
