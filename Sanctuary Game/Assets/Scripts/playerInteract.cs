@@ -63,7 +63,7 @@ public class playerInteract: MonoBehaviour {
 				Debug.DrawRay( transform.position, hit.point, Color.white, 5 );
 				Debug.DrawRay( transform.position, hit.point+ transform.forward, Color.red, 5 );
 
-				if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f, layerMask)){
+				if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f)){
 					Debug.Log ("entered raycast");
 					tempHitObj = hit.collider.gameObject.transform;
 
