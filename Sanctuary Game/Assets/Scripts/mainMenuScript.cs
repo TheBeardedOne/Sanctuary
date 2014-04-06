@@ -48,7 +48,7 @@ public class mainMenuScript : MonoBehaviour {
 					onMenu = true;
 				}
 				if(GUI.Button (new Rect (Screen.width/2 - 300, Screen.height/2 + 150, 100, 20), "Mute Sound")){
-
+					AudioListener.pause = true;
 				}
 				if(GUI.Button (new Rect (Screen.width/2 - 300, Screen.height/2 + 200, 100, 20), "Enable Oculus")){
 					
