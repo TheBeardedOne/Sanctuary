@@ -121,10 +121,11 @@ public class playerInteract: MonoBehaviour {
 			
 			//Attach the object as a child to the camera
 			hitObject.parent = this.transform;
+			hitObject.Rotate (new Vector3 (90,0,0));
 			
 			//Change the final int to change distance from camera
 			hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
-			hitObject.transform.rotation = this.transform.rotation; 
+			//hitObject.transform.rotation = this.transform.rotation; 
 		}
 		//If the object should not be held, detach from the camera and turn on gravity
 		else if(hitObject != null && isHolding == false){ 
@@ -134,24 +135,27 @@ public class playerInteract: MonoBehaviour {
 		}
 	}
 
-	// FUNCTIONS TO RECALL STONE (This could be cleaner, but honestly I'm runnign outta time!!)
+	// FUNCTIONS TO RECALL STONE (This could be cleaner)
 	void recallStoneOrange(){
-		Debug.Log("Entered FUNCTION Orange");
+		//Debug.Log("Entered FUNCTION Orange");
 		isHolding = true;
 		hitObject = GameObject.Find ("Orange_stone").gameObject.transform;
 
 		hitObject.rigidbody.useGravity = false; 
+
 		
 		//Attach the object as a child to the camera
 		hitObject.parent = this.transform;
+		GameObject.Find ("Orange_stone").rigidbody.transform.Rotate (new Vector3 (90, 0, 0));
 		
 		//Change the final int to change distance from camera
 		hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
-		hitObject.transform.rotation = this.transform.rotation; 
+		//hitObject.transform.rotation = this.transform.rotation; 
+
 	}
 
 	void recallStoneBlue(){
-		Debug.Log("Entered FUNCTION Blue");
+	//	Debug.Log("Entered FUNCTION Blue");
 		isHolding = true;
 		hitObject = GameObject.Find ("Blue_stone").gameObject.transform;
 		
@@ -163,10 +167,11 @@ public class playerInteract: MonoBehaviour {
 		//Change the final int to change distance from camera
 		hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
 		hitObject.transform.rotation = this.transform.rotation; 
+
 	}
 
 	void recallStoneGreen(){
-		Debug.Log("Entered FUNCTION Green");
+	//	Debug.Log("Entered FUNCTION Green");
 		isHolding = true;
 		hitObject = GameObject.Find ("Green_stone").gameObject.transform;
 		
@@ -181,7 +186,7 @@ public class playerInteract: MonoBehaviour {
 	}
 
 	void recallStoneKey(){
-		Debug.Log("Entered FUNCTION Key");
+	//	Debug.Log("Entered FUNCTION Key");
 		isHolding = true;
 		hitObject = GameObject.Find ("Key").gameObject.transform;
 		
