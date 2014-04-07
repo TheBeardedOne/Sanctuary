@@ -19,6 +19,7 @@ public class openDoor : MonoBehaviour {
 		keyFind = scriptFind.GetComponent<playerInteract>();
 		keyHold = false;
 		this.animation ["cabinDoorAnim"].wrapMode = WrapMode.ClampForever;
+		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 	
 	// If the door is set to open, play the animation
@@ -41,11 +42,19 @@ public class openDoor : MonoBehaviour {
 	//and mouse is clicked, set the door animation to true
 	void OnTriggerStay(){
 		if (thePlayer != null) {
+			if(keyHold){
+				this.GetComponent<Highlight_Mouseover> ().set = true;
+			}
+
 			if (Input.GetMouseButtonDown (0)) {
 				if(keyHold){
 					open = true;
 				}
 			}
 		}
+	}
+
+	void OnTriggerExit(){
+		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 }

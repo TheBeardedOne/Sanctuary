@@ -64,6 +64,7 @@ public class OpenLvl3 : MonoBehaviour {
 		if (playerController != null) {
 			curHold = holder.hitObject;
 			if (holding) {
+				GameObject.Find("Reticule").GetComponent<GUICrosshair>().OriginalOn = false;
 
 				//**** Changed "Set active" to false render - Jeremy ****
 				if(Input.GetMouseButtonDown (0)){
@@ -78,5 +79,9 @@ public class OpenLvl3 : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	void OnTriggerExit(){
+		GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;
 	}
 }

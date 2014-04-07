@@ -42,6 +42,8 @@ public class playerInteract: MonoBehaviour {
 		//Reverses the bitmask so that we're hitting everything EXCEPT layer 8
 		layerMask = ~layerMask;
 
+		changeCrossHair ();
+
 		if(Input.GetKeyDown (KeyCode.P)){
 			if(!isPaused){
 				isPaused = true;
@@ -200,4 +202,15 @@ public class playerInteract: MonoBehaviour {
 		hitObject.transform.rotation = this.transform.rotation; 
 	}
 
+	void changeCrossHair(){
+		if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f)){
+			if(hit.collider.gameObject.tag == "Fire"){
+				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
+			}
+			if(hit.collider.gameObject.tag == "GrabbableObject" && isHolding == false){
+				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
+			}
+		}
+		else{GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;}
+	}
 }

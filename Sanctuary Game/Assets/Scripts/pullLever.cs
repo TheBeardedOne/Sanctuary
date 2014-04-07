@@ -18,6 +18,7 @@ public class pullLever : MonoBehaviour {
 		this.animation ["leverPull"].wrapMode = WrapMode.ClampForever;
 		leftWall.animation ["leftCaveWall"].wrapMode = WrapMode.ClampForever;
 		rightWall.animation ["rightCaveWall"].wrapMode = WrapMode.ClampForever;
+		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 	
 	// If the lever is being pulled, play the lever animation
@@ -43,9 +44,14 @@ public class pullLever : MonoBehaviour {
 	// set the door animation to true
 	void OnTriggerStay(){
 		if (thePlayer != null) {
+			this.GetComponent<Highlight_Mouseover> ().set = true;
 			if (Input.GetMouseButtonDown (0)) {
 				pulled = true;
 			}
 		}
+	}
+
+	void OnTriggerExit(){
+		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 }

@@ -84,6 +84,7 @@ public class lvl3Activation : MonoBehaviour {
 		if (mover != null) {
 			isCarrying = carrier.hitObject;
 			if (hold) {
+				GameObject.Find("Reticule").GetComponent<GUICrosshair>().OriginalOn = false;
 				if(Input.GetMouseButtonDown (0)){
 					// checks to see if the slot matches with the correct stone
 					// if so, play the insertion animation
@@ -104,5 +105,9 @@ public class lvl3Activation : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	void OnTriggerExit(){
+		GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;
 	}
 }

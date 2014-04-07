@@ -59,6 +59,7 @@ public class OpenLvl2 : MonoBehaviour {
 		if (thePlayer != null) {
 			holdStone = holding.hitObject;
 			if (carry) {
+				GameObject.Find("Reticule").GetComponent<GUICrosshair>().OriginalOn = false;
 
 				//****Note from Jeremy - Changed it from being set to active to renderer being disabled. I cannot find an object that is set to active.****
 				if(Input.GetMouseButtonDown (0)){
@@ -69,5 +70,9 @@ public class OpenLvl2 : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	void OnTriggerExit(){
+		GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;
 	}
 }
