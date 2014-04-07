@@ -7,18 +7,13 @@ public class Highlight_Mouseover : MonoBehaviour {
 	
 	private float redGreenMultiply = 0.50f; 
 	
-	
-	
 	private Color originalColor;
-	
-	
 	
 	private void Start()
 		
 	{
 		
 		originalColor = gameObject.renderer.material.color;
-		
 	}
 	
 	
@@ -28,7 +23,7 @@ public class Highlight_Mouseover : MonoBehaviour {
 	{
 		
 		AddHighlight();
-		
+		GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
 	}
 	
 	
@@ -38,7 +33,7 @@ public class Highlight_Mouseover : MonoBehaviour {
 	{
 		
 		RemoveHighlight();
-		
+		GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;
 	}
 	
 	
