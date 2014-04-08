@@ -127,7 +127,7 @@ public class playerInteract: MonoBehaviour {
 			
 			//Change the final int to change distance from camera
 			hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
-			//hitObject.transform.rotation = this.transform.rotation; 
+			hitObject.transform.rotation = this.transform.rotation; 
 		}
 		//If the object should not be held, detach from the camera and turn on gravity
 		else if(hitObject != null && isHolding == false){ 
@@ -152,7 +152,7 @@ public class playerInteract: MonoBehaviour {
 		
 		//Change the final int to change distance from camera
 		hitObject.transform.position = (this.transform.position + (this.transform.forward * 2.25f)) - new Vector3(0, 0.5f, 0); 
-		//hitObject.transform.rotation = this.transform.rotation; 
+		hitObject.transform.rotation = this.transform.rotation; 
 
 	}
 
