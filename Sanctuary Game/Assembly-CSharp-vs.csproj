@@ -211,7 +211,9 @@
      <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenVector3.cs" />
      <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenVector4.cs" />
      <Compile Include="Assets\Scripts\CabinVanish.cs" />
+     <Compile Include="Assets\Scripts\CameraFadeFrom.cs" />
      <Compile Include="Assets\Scripts\CrystalLit.cs" />
+     <Compile Include="Assets\Scripts\FadeToDeath.cs" />
      <Compile Include="Assets\Scripts\GUICrosshair.cs" />
      <Compile Include="Assets\Scripts\Highlight_Mouseover.cs" />
      <Compile Include="Assets\Scripts\OpenLvl2.cs" />

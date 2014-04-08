@@ -92,6 +92,9 @@ public class respawnAtCheckpoint : MonoBehaviour {
 		else{
 			thePlayer = null;
 		}
+		//Accesses other script on "fadeTrigger" and clears the fade
+		GameObject.Find ("fadeTrigger").GetComponent<FadeToDeath> ().dead = false;
+
 	}
 	
 	// Respawns the character controller at the specified checkpoint
