@@ -1,0 +1,60 @@
+{"frames": {
+
+"Blue_pic.png":
+{
+	"frame": {"x":2,"y":1006,"w":480,"h":528},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":400,"y":91,"w":480,"h":528},
+	"sourceSize": {"w":1280,"h":720}
+},
+"Green_pic.png":
+{
+	"frame": {"x":484,"y":1006,"w":478,"h":526},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":400,"y":91,"w":478,"h":526},
+	"sourceSize": {"w":1280,"h":720}
+},
+"Key.png":
+{
+	"frame": {"x":2,"y":1536,"w":640,"h":186},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":159,"y":177,"w":640,"h":186},
+	"sourceSize": {"w":960,"h":540}
+},
+"Menu_GUI_Bar.png":
+{
+	"frame": {"x":2,"y":2,"w":1884,"h":470},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":4,"w":1884,"h":470},
+	"sourceSize": {"w":1908,"h":480}
+},
+"Orange_pic.png":
+{
+	"frame": {"x":2,"y":474,"w":482,"h":530},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":398,"y":89,"w":482,"h":530},
+	"sourceSize": {"w":1280,"h":720}
+},
+"Title.png":
+{
+	"frame": {"x":2,"y":1724,"w":556,"h":162},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":556,"h":162},
+	"sourceSize": {"w":556,"h":162}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "Sanctuary Atlas.png",
+	"format": "RGBA8888",
+	"size": {"w":2048,"h":2048},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:81b442503cf6a8b36112c73c085ef3b6:b35bd2a7fc535ee221ee85c488727121:5ebf3afe42e6cf148013e0180682669f$"
+}
+}
