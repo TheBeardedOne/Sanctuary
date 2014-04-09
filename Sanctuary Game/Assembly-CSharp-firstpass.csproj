@@ -63,6 +63,7 @@
      <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-SemiBold-56px.fnt" />
      <None Include="Assets\Daikon Forge\Examples\Skins\AnimatedSprite\OpenSans-Semibold-18px.fnt" />
      <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\SIL Open Font License.txt" />
+     <None Include="Assets\Daikon Forge\Sanctuary Atlas Try 2.txt" />
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHue.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
      <None Include="Assets\Daikon Forge\DFGUI\Shaders\Dynamic Font Shader.shader" />
