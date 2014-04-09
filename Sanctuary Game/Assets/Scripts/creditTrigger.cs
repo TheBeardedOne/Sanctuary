@@ -112,7 +112,9 @@ public class creditTrigger : MonoBehaviour
 	}
 	
 	public void OnTriggerEnter(Collider other){
-		dead = true;
+		if (other.name == "Character") {
+						dead = true;
+				}
 	}
 
 	

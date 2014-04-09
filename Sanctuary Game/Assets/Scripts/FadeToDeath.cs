@@ -108,8 +108,10 @@ public class FadeToDeath : MonoBehaviour
 	}
 	
 	public void OnTriggerEnter(Collider other){
-		Debug.Log ("Fallen Through");
-		dead = true;
+		if (other.name == "Character") {
+						Debug.Log ("Fallen Through");
+						dead = true;
+				}
 	}
 	
 	/*IEnumerator FadeRed() {
