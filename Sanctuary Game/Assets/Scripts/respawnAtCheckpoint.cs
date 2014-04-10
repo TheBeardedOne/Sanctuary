@@ -34,9 +34,9 @@ public class respawnAtCheckpoint : MonoBehaviour {
 		pastCave = false;
 
 		// default checkpoint
-		xpos = -4;
-		ypos = 50;
-		zpos = 10;
+		xpos = -0.04f;
+		ypos = 45;
+		zpos = 9.8f;
 	}
 	
 	void Update () {
