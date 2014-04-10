@@ -108,6 +108,12 @@
      <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenVector2Inspector.cs" />
      <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenVector3Inspector.cs" />
      <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenVector4Inspector.cs" />
+     <Compile Include="Assets\OVR\Editor\OVRBuild.cs" />
+     <Compile Include="Assets\OVR\Editor\OVRCameraControllerEditor.cs" />
+     <Compile Include="Assets\OVR\Editor\OVRDeviceEditor.cs" />
+     <Compile Include="Assets\OVR\Editor\OVREditorGUIUtility.cs" />
+     <Compile Include="Assets\OVR\Editor\OVRPlayerControllerEditor.cs" />
+     <Compile Include="Assets\OVR\Editor\OVRPrefabs.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-24px.fnt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
@@ -127,6 +133,7 @@
      <None Include="Assets\Daikon Forge\Sanctuary Atlas Try 2.txt" />
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHue.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_CA.shader" />
      <None Include="Assets\Daikon Forge\DFGUI\Shaders\Dynamic Font Shader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColoredCharacterShader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHSB.shader" />
@@ -135,6 +142,8 @@
      <None Include="Assets\Daikon Forge\Examples\Shaders\Radar Sweep Shader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-14px.fnt" />
      <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable.fnt" />
+     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection.shader" />
+     <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\OpenSans Font License.txt" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\LCD Font.fnt" />

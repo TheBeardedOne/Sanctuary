@@ -12,6 +12,8 @@ public class gameManager : MonoBehaviour {
 	//isSound is true when sound is playing
 	private bool isSound;
 	// Use this for initialization
+
+	float lockPos = 2;
 	void Start () {
 		onPause = false;
 		onOptions = false;
