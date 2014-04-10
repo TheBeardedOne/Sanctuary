@@ -49,6 +49,8 @@ public class openDoor : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				if(keyHold){
 					open = true;
+					//de-renders key instead of having it drop to the floor
+					GameObject.Find ("Key").renderer.enabled = false;
 				}
 			}
 		}
