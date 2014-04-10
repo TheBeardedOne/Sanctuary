@@ -1,0 +1,20 @@
+{"frames": {
+
+"Letter.png":
+{
+	"frame": {"x":2,"y":2,"w":1006,"h":992},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":19,"w":1006,"h":992},
+	"sourceSize": {"w":1024,"h":1024}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "Letter Atlas.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:268270f5d5c1a53f656e64d39fe65f0a:07845bbb4002348de3e6a6274de11b54:a077ba28bd0c07685a9e39d2f5094999$"
+}
+}
