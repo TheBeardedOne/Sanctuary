@@ -79,6 +79,11 @@ public class playerInteract: MonoBehaviour {
 						Debug.Log ("fire");
 						fireSet.SetActive (true);				
 					}
+					if(hit.collider.gameObject.tag == "letter"){
+						GameObject.Find ("Letter").renderer.enabled = false;
+						GameObject.Find ("Letter").SetActive(false);
+						GameObject.Find ("UI_Letter").GetComponent<dfSprite>().IsVisible = true;
+					}
 				}
 			}
 			//If the grab key is pressed and an object is held, drop it
