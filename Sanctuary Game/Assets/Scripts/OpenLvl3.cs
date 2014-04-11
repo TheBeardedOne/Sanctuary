@@ -48,7 +48,7 @@ public class OpenLvl3 : MonoBehaviour {
 					top.animation.Play("Lvl2Exit2");
 				}
 			}
-			GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
+			//GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 		}
 	}
 
@@ -67,7 +67,7 @@ public class OpenLvl3 : MonoBehaviour {
 		if (playerController != null) {
 			curHold = holder.hitObject;
 			if (holding) {
-				GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
+				//GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 
 				//**** Changed "Set active" to false render - Jeremy ****
 				if(Input.GetMouseButtonDown (0)){
@@ -85,6 +85,6 @@ public class OpenLvl3 : MonoBehaviour {
 	}
 
 	void OnTriggerExit(){
-		GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
+		//GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 	}
 }

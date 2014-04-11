@@ -107,8 +107,8 @@ public class respawnAtCheckpoint : MonoBehaviour {
 			thePlayer.transform.position = checkpoint;
 		}
 		else if(holder.isHolding){
-			if(holder.hitObject.gameObject.name == Other.gameObject.name){
-			   	audio.Play();
+			if(holder.hitObject.gameObject.name != Other.gameObject.name){
+				audio.Play ();
 				GameObject.FindGameObjectWithTag("Player").transform.position = checkpoint;
 			}
 		}
