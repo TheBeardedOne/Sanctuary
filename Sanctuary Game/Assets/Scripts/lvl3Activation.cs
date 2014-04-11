@@ -88,11 +88,12 @@ public class lvl3Activation : MonoBehaviour {
 	
 	// If the first person controller is within the trigger range while holding the stones
 	//and the mouse is clicked, set the animation to be played
-	void OnTriggerStay(){
+	void OnTriggerStay(Collider other){
 		if (mover != null) {
+			hold = carrier.isHolding;
 			isCarrying = carrier.hitObject;
 			if (hold) {
-				//GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
+				this.GetComponent<Highlight_Mouseover> ().set = true;
 				if(Input.GetMouseButtonDown (0)){
 					// checks to see if the slot matches with the correct stone
 					// if so, play the insertion animation
@@ -115,7 +116,7 @@ public class lvl3Activation : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit(){
-		//GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
+	void OnTriggerExit(Collider other){
+		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 }

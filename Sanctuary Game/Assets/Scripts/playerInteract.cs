@@ -210,17 +210,17 @@ public class playerInteract: MonoBehaviour {
 	}
 
 	void changeCrossHair(){
-		/*if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f)){
+		if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f)){
 			if(hit.collider.gameObject.tag == "Fire"){
 				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
 			}
-			if(hit.collider.gameObject.tag == "letter"){
+			else if(hit.collider.gameObject.tag == "letter"){
 				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
 			}
-			if(hit.collider.gameObject.tag == "GrabbableObject" && isHolding == false){
+			else if(hit.collider.gameObject.tag == "GrabbableObject" && isHolding == false){
 				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
 			}
 		}
-		else{GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;}*/
+		else{GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;}
 	}
 }

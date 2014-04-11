@@ -58,16 +58,18 @@ public class OpenLvl3 : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			playerController = other;
 			holding = holder.isHolding;
+			curHold = holder.hitObject;
 		}
 	}
 	
 	// If the first person controller is within the trigger range while holding the key
 	//and mouse is clicked, set the door animation to true
-	void OnTriggerStay(){
+	void OnTriggerStay(Collider other){
 		if (playerController != null) {
+			holding = holder.isHolding;
 			curHold = holder.hitObject;
 			if (holding) {
-				//GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
+				this.GetComponent<Highlight_Mouseover> ().set = true;
 
 				//**** Changed "Set active" to false render - Jeremy ****
 				if(Input.GetMouseButtonDown (0)){
@@ -84,7 +86,7 @@ public class OpenLvl3 : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit(){
-		//GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
+	void OnTriggerExit(Collider other){
+		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 }

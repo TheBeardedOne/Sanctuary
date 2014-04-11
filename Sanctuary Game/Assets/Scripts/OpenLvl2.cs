@@ -56,11 +56,12 @@ public class OpenLvl2 : MonoBehaviour {
 	
 	// If the first person controller is within the trigger range while holding the key
 	//and mouse is clicked, set the door animation to true
-	void OnTriggerStay(){
+	void OnTriggerStay(Collider other){
 		if (thePlayer != null) {
+			carry = holding.isHolding;
 			holdStone = holding.hitObject;
 			if (carry) {
-				//GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
+				this.GetComponent<Highlight_Mouseover> ().set = true;
 
 				//****Note from Jeremy - Changed it from being set to active to renderer being disabled. I cannot find an object that is set to active.****
 				if(Input.GetMouseButtonDown (0)){
@@ -73,7 +74,7 @@ public class OpenLvl2 : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit(){
-		//GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
+	void OnTriggerExit(Collider other){
+		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 }

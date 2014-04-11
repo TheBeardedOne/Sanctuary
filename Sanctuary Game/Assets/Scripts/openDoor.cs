@@ -43,10 +43,10 @@ public class openDoor : MonoBehaviour {
 	//and mouse is clicked, set the door animation to true
 	void OnTriggerStay(){
 		if (thePlayer != null) {
+			keyHold = keyFind.isHolding;
 			if(keyHold){
 				this.GetComponent<Highlight_Mouseover> ().set = true;
 			}
-			else{this.GetComponent<Highlight_Mouseover> ().set = false;}
 
 			if (Input.GetMouseButtonDown (0)) {
 				if(keyHold){

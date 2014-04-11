@@ -29,6 +29,5 @@ public class CabinVanish : MonoBehaviour {
 		Debug.Log ("exit");
 		shack.SetActive (false);
 		door.SetActive (false);
-		GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 	}
 }

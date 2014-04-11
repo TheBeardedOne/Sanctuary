@@ -39,6 +39,7 @@ public class pullLever : MonoBehaviour {
 	// Recognizes the first person controller
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag == "Player") {
+			this.GetComponent<Highlight_Mouseover> ().set = true;
 			thePlayer = other;
 		}
 	}
@@ -47,8 +48,6 @@ public class pullLever : MonoBehaviour {
 	// set the door animation to true
 	void OnTriggerStay(){
 		if (thePlayer != null) {
-			this.GetComponent<Highlight_Mouseover> ().set = true;
-			//GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 			if (Input.GetMouseButtonDown (0)) {
 				pulled = true;
 			}
@@ -56,7 +55,6 @@ public class pullLever : MonoBehaviour {
 	}
 
 	void OnTriggerExit(){
-		//GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 }
