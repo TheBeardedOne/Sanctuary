@@ -19,6 +19,7 @@ public class creditTrigger : MonoBehaviour
 	private int m_FadeGUIDepth = -1000;				// make sure this texture is drawn on top of everything
 	public bool isFading = false;
 	public float times = 0;
+	public GameObject gate;
 	public bool dead = false;
 	public bool creditsTrigger = false;
 	
@@ -28,13 +29,18 @@ public class creditTrigger : MonoBehaviour
 		m_FadeTexture = new Texture2D(1, 1);        
 		m_BackgroundStyle.normal.background = m_FadeTexture;
 		SetScreenOverlayColor(m_CurrentScreenOverlayColor);
-		
+		gate = GameObject.Find ("Bridge_to_Drop");
 		// TEMP:
 		// usage: use "SetScreenOverlayColor" to set the initial color, then use "StartFade" to set the desired color & fade duration and start the fade
 		//SetScreenOverlayColor(new Color(0,0,0,1));
 		//StartFade(new Color(1,0,0,1), 5);
 	}
 	void Update(){
+		//sets dead to true once the animation is half over
+		if(gate.animation["toSanctuary"].time >= gate.animation["toSanctuary"].length/3){
+			dead = true;
+		}
+
 		//dead = GameObject.FindGameObjectWithTag("Player").GetComponent<playerInteract>().isdead;
 		//dead = SendMessage ("deadReturn");
 		if(dead && !isFading){
@@ -113,8 +119,8 @@ public class creditTrigger : MonoBehaviour
 	
 	public void OnTriggerEnter(Collider other){
 		if (other.name == "Character") {
-						dead = true;
-				}
+			gate.animation.Play ("toSanctuary");
+		}
 	}
 
 	

@@ -24,7 +24,7 @@ public class Highlight_Mouseover : MonoBehaviour {
 		
 	{
 		if(set){
-			AddHighlight();
+			//AddHighlight();
 			GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
 		}
 	}
@@ -35,7 +35,7 @@ public class Highlight_Mouseover : MonoBehaviour {
 		
 	{
 		
-		RemoveHighlight();
+		//RemoveHighlight();
 		GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;
 	}
 	

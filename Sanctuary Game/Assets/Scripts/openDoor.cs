@@ -44,7 +44,9 @@ public class openDoor : MonoBehaviour {
 		if (thePlayer != null) {
 			if(keyHold){
 				this.GetComponent<Highlight_Mouseover> ().set = true;
+				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
 			}
+			else{this.GetComponent<Highlight_Mouseover> ().set = false;}
 
 			if (Input.GetMouseButtonDown (0)) {
 				if(keyHold){
