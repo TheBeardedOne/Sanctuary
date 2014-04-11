@@ -82,6 +82,7 @@ public class respawnAtCheckpoint : MonoBehaviour {
 	// If so, sets thePlayer variable to the character Controller
 	void OnTriggerEnter(Collider Other){
 		if (Other.gameObject.tag == "Player") {
+			Debug.Log("TESSSSSSSSSSSSSST");
 			thePlayer = Other;
 			checkpoint = new Vector3 (xpos, ypos, zpos);
 		}
