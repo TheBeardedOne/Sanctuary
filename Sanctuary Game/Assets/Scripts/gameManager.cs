@@ -4,13 +4,19 @@ using System.Collections;
 //This script will run all miscellaneous functions related to the game. 
 
 public class gameManager : MonoBehaviour {
+	//Camera
 
 	//Menu Booleans
 	private bool onPause;
 	private bool onOptions;
 	private bool onMenu;
+
 	//isSound is true when sound is playing
 	private bool isSound;
+
+	//Is occulus enabled?
+	private bool onOculus;
+
 	// Use this for initialization
 
 	float lockPos = 2;
@@ -18,6 +24,11 @@ public class gameManager : MonoBehaviour {
 		onPause = false;
 		onOptions = false;
 		onMenu = false;
+		onOculus = false;
+
+		//Oculus is disabled for start
+		GameObject.Find ("CameraLeft").GetComponent<Camera>().enabled = false;
+		GameObject.Find ("CameraRight").GetComponent<Camera>().enabled = false;
 
 		//Checks to see if sound is already paused
 		if (AudioListener.pause == false) {
@@ -40,6 +51,7 @@ public class gameManager : MonoBehaviour {
 				gameObject.GetComponent<FPSInputController>().enabled = false;
 				gameObject.GetComponent<CharacterController>().enabled = false;
 				gameObject.GetComponent<CharacterMotor>().enabled = false;
+				GameObject.Find ("Main Camera").GetComponent<MouseLook>().enabled = false;
 
 
 
@@ -54,11 +66,12 @@ public class gameManager : MonoBehaviour {
 				gameObject.GetComponent<FPSInputController>().enabled = true;
 				gameObject.GetComponent<CharacterController>().enabled = true;
 				gameObject.GetComponent<CharacterMotor>().enabled = true;
-			//	GameObject.Find("Main Camera").GetComponent<MouseLook>().enabled = true;				
+				GameObject.Find("Main Camera").GetComponent<MouseLook>().enabled = true;				
 
 				Screen.lockCursor = true;
 				onPause = false;
 				onMenu = false;
+				onOptions = false;
 				Time.timeScale = 1.0f;
 			}
 		}
@@ -88,6 +101,7 @@ public class gameManager : MonoBehaviour {
 				if(GUI.Button (new Rect (Screen.width/2 - 50, Screen.height/2, 100, 20), "Back")){
 					onOptions = false;
 					onMenu = true;
+
 				}
 				
 				if(GUI.Button (new Rect (Screen.width/2 - 50, Screen.height/2 + 60, 100, 20), "Mute Sound")){
@@ -104,7 +118,18 @@ public class gameManager : MonoBehaviour {
 					
 				}
 				if(GUI.Button (new Rect (Screen.width/2 - 50, Screen.height/2 + 30, 100, 20), "Enable Oculus")){
-					
+					if(onOculus == false){
+						GameObject.Find ("Main Camera").GetComponent<Camera>().enabled = false;
+						GameObject.Find ("CameraLeft").GetComponent<Camera>().enabled = true;
+						GameObject.Find ("CameraRight").GetComponent<Camera>().enabled = true;
+						onOculus = true;
+						//Camera.en
+					}else{
+						GameObject.Find ("Main Camera").GetComponent<Camera>().enabled = true;
+						GameObject.Find ("CameraLeft").GetComponent<Camera>().enabled = false;
+						GameObject.Find ("CameraRight").GetComponent<Camera>().enabled = false;
+						Debug.Log ("EXIT RIFT");
+					}
 				}
 			}
 		}
