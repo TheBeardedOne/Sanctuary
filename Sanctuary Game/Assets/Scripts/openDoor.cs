@@ -24,9 +24,10 @@ public class openDoor : MonoBehaviour {
 	
 	// If the door is set to open, play the animation
 	void Update () {
+		Debug.Log (this.GetComponent<Highlight_Mouseover> ().set);
 		if (open == true) {
-		this.animation.Play("cabinDoorAnim");
-		GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
+			this.animation.Play("cabinDoorAnim");
+			GameObject.Find ("Key").renderer.enabled = false;
 		}
 	}
 
@@ -45,7 +46,6 @@ public class openDoor : MonoBehaviour {
 		if (thePlayer != null) {
 			if(keyHold){
 				this.GetComponent<Highlight_Mouseover> ().set = true;
-				GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 			}
 			else{this.GetComponent<Highlight_Mouseover> ().set = false;}
 
@@ -61,7 +61,6 @@ public class openDoor : MonoBehaviour {
 	}
 
 	void OnTriggerExit(){
-		GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 }

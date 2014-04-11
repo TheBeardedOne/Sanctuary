@@ -14,7 +14,7 @@ public class Highlight_Mouseover : MonoBehaviour {
 	private void Start()
 		
 	{
-		set = true;
+		set = false;
 		originalColor = gameObject.renderer.material.color;
 	}
 	

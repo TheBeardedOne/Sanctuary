@@ -76,6 +76,8 @@ public class respawnAtCheckpoint : MonoBehaviour {
 				zpos = 26;
 			}
 		}
+
+		checkpoint = new Vector3 (xpos, ypos, zpos);
 	}
 	
 	// Checks to see if the collider object that is entering is the character controller
@@ -84,15 +86,15 @@ public class respawnAtCheckpoint : MonoBehaviour {
 		if (Other.gameObject.tag == "Player") {
 			Debug.Log("TESSSSSSSSSSSSSST");
 			thePlayer = Other;
-			checkpoint = new Vector3 (xpos, ypos, zpos);
 		}
 		// if something else enters the trigger first, check if the player is holding the item
-		else if(holder.isHolding){
-			thePlayer = GameObject.FindGameObjectWithTag("Player").collider;
+		else if(Other.gameObject.tag != "Player"){
+			if(holder.isHolding){
+				thePlayer = GameObject.FindGameObjectWithTag("Player").collider;
+			}
+			else{thePlayer = null;}
 		}
-		else{
-			thePlayer = null;
-		}
+		else{thePlayer = GameObject.FindGameObjectWithTag("Player").collider;}
 		//Accesses other script on "fadeTrigger" and clears the fade
 		GameObject.Find ("fadeTrigger").GetComponent<FadeToDeath> ().dead = false;
 
@@ -103,6 +105,12 @@ public class respawnAtCheckpoint : MonoBehaviour {
 		if(thePlayer != null){
 			audio.Play ();
 			thePlayer.transform.position = checkpoint;
+		}
+		else if(holder.isHolding){
+			if(holder.hitObject.gameObject.name == Other.gameObject.name){
+			   	audio.Play();
+				GameObject.FindGameObjectWithTag("Player").transform.position = checkpoint;
+			}
 		}
 	}
 }
