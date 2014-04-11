@@ -46,6 +46,7 @@ public class openDoor : MonoBehaviour {
 			keyHold = keyFind.isHolding;
 			if(keyHold){
 				this.GetComponent<Highlight_Mouseover> ().set = true;
+				GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 			}
 
 			if (Input.GetMouseButtonDown (0)) {
@@ -61,5 +62,6 @@ public class openDoor : MonoBehaviour {
 
 	void OnTriggerExit(){
 		this.GetComponent<Highlight_Mouseover> ().set = false;
+		GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = false;
 	}
 }

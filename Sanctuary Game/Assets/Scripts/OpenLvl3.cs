@@ -70,6 +70,7 @@ public class OpenLvl3 : MonoBehaviour {
 			curHold = holder.hitObject;
 			if (holding) {
 				this.GetComponent<Highlight_Mouseover> ().set = true;
+				GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 
 				//**** Changed "Set active" to false render - Jeremy ****
 				if(Input.GetMouseButtonDown (0)){
@@ -88,5 +89,6 @@ public class OpenLvl3 : MonoBehaviour {
 
 	void OnTriggerExit(Collider other){
 		this.GetComponent<Highlight_Mouseover> ().set = false;
+		GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = false;
 	}
 }

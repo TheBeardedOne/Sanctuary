@@ -94,6 +94,7 @@ public class lvl3Activation : MonoBehaviour {
 			isCarrying = carrier.hitObject;
 			if (hold) {
 				this.GetComponent<Highlight_Mouseover> ().set = true;
+				GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 				if(Input.GetMouseButtonDown (0)){
 					// checks to see if the slot matches with the correct stone
 					// if so, play the insertion animation
@@ -118,5 +119,6 @@ public class lvl3Activation : MonoBehaviour {
 
 	void OnTriggerExit(Collider other){
 		this.GetComponent<Highlight_Mouseover> ().set = false;
+		GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = false;
 	}
 }

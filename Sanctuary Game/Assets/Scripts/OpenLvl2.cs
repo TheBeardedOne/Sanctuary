@@ -62,6 +62,7 @@ public class OpenLvl2 : MonoBehaviour {
 			holdStone = holding.hitObject;
 			if (carry) {
 				this.GetComponent<Highlight_Mouseover> ().set = true;
+				GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 
 				//****Note from Jeremy - Changed it from being set to active to renderer being disabled. I cannot find an object that is set to active.****
 				if(Input.GetMouseButtonDown (0)){
@@ -76,5 +77,6 @@ public class OpenLvl2 : MonoBehaviour {
 
 	void OnTriggerExit(Collider other){
 		this.GetComponent<Highlight_Mouseover> ().set = false;
+		GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 	}
 }

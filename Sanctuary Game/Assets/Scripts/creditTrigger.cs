@@ -120,7 +120,7 @@ public class creditTrigger : MonoBehaviour
 	public void OnTriggerEnter(Collider other){
 		if (other.name == "Character") {
 			gate.animation.Play ("toSanctuary");
-			audio.Play ();
+			GameObject.Find("Bridge_to_Drop").audio.Play ();
 		}
 	}
 

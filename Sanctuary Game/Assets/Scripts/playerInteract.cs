@@ -220,6 +220,11 @@ public class playerInteract: MonoBehaviour {
 			else if(hit.collider.gameObject.tag == "GrabbableObject" && isHolding == false){
 				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
 			}
+			else if(hit.collider.gameObject.tag == "interactable"){
+				if(inTrigger){
+					GameObject.Find("Reticule").GetComponent<GUICrosshair>().OriginalOn = false;
+				}
+			}
 		}
 		else{GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;}
 	}

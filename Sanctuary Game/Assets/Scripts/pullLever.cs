@@ -40,6 +40,7 @@ public class pullLever : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag == "Player") {
 			this.GetComponent<Highlight_Mouseover> ().set = true;
+			GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 			thePlayer = other;
 		}
 	}
@@ -56,5 +57,6 @@ public class pullLever : MonoBehaviour {
 
 	void OnTriggerExit(){
 		this.GetComponent<Highlight_Mouseover> ().set = false;
+		GameObject.Find("Main Camera").GetComponent<playerInteract>().inTrigger = false;
 	}
 }
