@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Mommy\Assets\Scripts\GameManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\lvl3Activation.cs">
     <Files>
-      <File FileName="..\..\Mommy\Assets\Standard_Assets\Character Controllers\Sources\Scripts\FPSInputController.js" Line="16" Column="51" />
-      <File FileName="..\..\Mommy\Assets\Scripts\GameManager.cs" Line="22" Column="45" />
+      <File FileName="Sanctuary Game.sln" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\lvl3Activation.cs" Line="73" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

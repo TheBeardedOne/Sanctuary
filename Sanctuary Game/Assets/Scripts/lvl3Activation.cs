@@ -11,6 +11,7 @@ public class lvl3Activation : MonoBehaviour {
 	public GameObject plat1;
 	public GameObject plat2;
 	public GameObject plat3;
+	public GameObject plat4;
 	public GameObject bridge;
 	public GameObject orngStone;
 	public GameObject bluStone;
@@ -32,6 +33,7 @@ public class lvl3Activation : MonoBehaviour {
 		plat1 = GameObject.Find ("Bridge_step_one");
 		plat2 = GameObject.Find ("Bridge_step_two");
 		plat3 = GameObject.Find ("Bridge_step_three");
+		plat4 = GameObject.Find ("Bridge_step_six");
 		bridge = GameObject.Find ("Bridge_to_Drop");
 
 		// set up whether the animation is to play only once or loop
@@ -41,6 +43,7 @@ public class lvl3Activation : MonoBehaviour {
 		plat1.animation ["firstStep"].wrapMode = WrapMode.Loop;
 		plat2.animation ["secondStep"].wrapMode = WrapMode.Loop;
 		plat3.animation ["secondStep2"].wrapMode = WrapMode.Loop;
+		plat4.animation ["fourthStep"].wrapMode = WrapMode.Loop;
 		bridge.animation ["toSanctuary"].wrapMode = WrapMode.ClampForever;
 	}
 	
@@ -67,7 +70,7 @@ public class lvl3Activation : MonoBehaviour {
 			else if(this.gameObject.name == "Green_slot"){
 				gStone.animation.Play("gStoneInsert");
 				if(gStone.animation["gStoneInsert"].time >= gStone.animation["gStoneInsert"].length){
-					bridge.animation.Play ("toSanctuary");
+					plat4.animation.Play ("fourthStep");
 				}
 			}
 		}
