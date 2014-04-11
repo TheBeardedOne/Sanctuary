@@ -13,8 +13,8 @@ public class pullLever : MonoBehaviour {
 	void Start () {
 		thePlayer = null;
 		pulled = false;
-		leftWall = GameObject.Find ("Wall_left");
-		rightWall = GameObject.Find ("Wall_right");
+		leftWall = GameObject.Find ("Cave_Platform_Left");
+		rightWall = GameObject.Find ("Cave_Platform_Right");
 		this.animation ["leverPull"].wrapMode = WrapMode.ClampForever;
 		leftWall.animation ["leftCaveWall"].wrapMode = WrapMode.ClampForever;
 		rightWall.animation ["rightCaveWall"].wrapMode = WrapMode.ClampForever;
