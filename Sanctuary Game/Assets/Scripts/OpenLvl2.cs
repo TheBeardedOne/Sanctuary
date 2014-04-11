@@ -37,9 +37,9 @@ public class OpenLvl2 : MonoBehaviour {
 		if (activate == true) {
 			stone.animation.Play("oStoneInsert");
 			if (stone.animation["oStoneInsert"].time >= stone.animation["oStoneInsert"].length){
+				door.audio.Play();
 				door.animation.Play();
 				gear.animation.Play();
-				stone.animation.Play();
 			}
 		}
 	}

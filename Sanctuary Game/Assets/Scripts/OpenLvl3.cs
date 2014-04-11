@@ -37,12 +37,14 @@ public class OpenLvl3 : MonoBehaviour {
 			if(this.gameObject.name == "Orange_slot_lvl2"){
 				oStone.animation.Play("oStoneInsert2");
 				if(oStone.animation["oStoneInsert2"].time >= oStone.animation["oStoneInsert2"].length){
+					bottom.audio.Play ();
 					bottom.animation.Play("Lvl2Exit1");
 				}
 			}
 			else if(this.gameObject.name == "Blue_slot"){
 				bStone.animation.Play("bStoneInsert");
 				if(bStone.animation["bStoneInsert"].time >= bStone.animation["bStoneInsert"].length){
+					top.audio.Play ();
 					top.animation.Play("Lvl2Exit2");
 				}
 			}

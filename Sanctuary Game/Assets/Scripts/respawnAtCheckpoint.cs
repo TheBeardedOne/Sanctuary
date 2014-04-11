@@ -51,17 +51,17 @@ public class respawnAtCheckpoint : MonoBehaviour {
 
 		// if the player has the green stone collect, set respawn to last checkpoint
 		if(holder.grnStoneGet){
-			xpos = -30.2f;
-			ypos = 93;
-			zpos = 630.3f;
+			xpos = 10.5f;
+			ypos = 52.8f;
+			zpos = 286.2f;
 		}
 		// checks if the player has collect the first stone (orange)
 		else if (holder.orngStoneGet){
 			// sets checkpoint at start of level 3
 			if(pastCave){
-				xpos = -0.7f;
-				ypos = 55.5f;
-				zpos = 367;
+				xpos = -2.9f;
+				ypos = 47.6f;
+				zpos = 230.3f;
 			}
 			// sets checkpoint to the entrance of the cave
 			else if(inCave){
@@ -101,6 +101,7 @@ public class respawnAtCheckpoint : MonoBehaviour {
 	// Respawns the character controller at the specified checkpoint
 	void OnTriggerExit(Collider Other){
 		if(thePlayer != null){
+			audio.Play ();
 			thePlayer.transform.position = checkpoint;
 		}
 	}
