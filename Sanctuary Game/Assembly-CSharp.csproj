@@ -243,6 +243,7 @@
      <Compile Include="Assets\Scripts\playerInteract.cs" />
      <Compile Include="Assets\Scripts\pullLever.cs" />
      <Compile Include="Assets\Scripts\respawnAtCheckpoint.cs" />
+     <Compile Include="Assets\jumpGone.cs" />
      <Compile Include="Assets\letterBehavior.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-24px.fnt" />

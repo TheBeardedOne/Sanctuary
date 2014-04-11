@@ -48,7 +48,7 @@ public class pullLever : MonoBehaviour {
 	void OnTriggerStay(){
 		if (thePlayer != null) {
 			this.GetComponent<Highlight_Mouseover> ().set = true;
-			GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
+			GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 			if (Input.GetMouseButtonDown (0)) {
 				pulled = true;
 			}
@@ -56,6 +56,7 @@ public class pullLever : MonoBehaviour {
 	}
 
 	void OnTriggerExit(){
+		GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 		this.GetComponent<Highlight_Mouseover> ().set = false;
 	}
 }

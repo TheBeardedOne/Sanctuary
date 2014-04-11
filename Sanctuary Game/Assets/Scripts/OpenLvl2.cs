@@ -36,6 +36,7 @@ public class OpenLvl2 : MonoBehaviour {
 	void Update () {
 		if (activate == true) {
 			stone.animation.Play("oStoneInsert");
+			GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 			if (stone.animation["oStoneInsert"].time >= stone.animation["oStoneInsert"].length){
 				door.audio.Play();
 				door.animation.Play();
@@ -59,7 +60,7 @@ public class OpenLvl2 : MonoBehaviour {
 		if (thePlayer != null) {
 			holdStone = holding.hitObject;
 			if (carry) {
-				GameObject.Find("Reticule").GetComponent<GUICrosshair>().OriginalOn = false;
+				GameObject.Find ("Main Camera").GetComponent<playerInteract>().inTrigger = true;
 
 				//****Note from Jeremy - Changed it from being set to active to renderer being disabled. I cannot find an object that is set to active.****
 				if(Input.GetMouseButtonDown (0)){
@@ -73,6 +74,6 @@ public class OpenLvl2 : MonoBehaviour {
 	}
 
 	void OnTriggerExit(){
-		GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;
+		GameObject.Find ("Main Camera").GetComponent<playerInteract> ().inTrigger = false;
 	}
 }

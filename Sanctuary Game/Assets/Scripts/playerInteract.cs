@@ -9,6 +9,7 @@ public class playerInteract: MonoBehaviour {
 	public bool isHolding;
 	public GameObject fireSet;
 	public bool isPaused;
+	public bool inTrigger;
 
 	// boolean for when the key items are collected
 	public bool keyGet;
@@ -26,6 +27,7 @@ public class playerInteract: MonoBehaviour {
 		tempHitObj = null;
 		isHolding = false;
 		isPaused = false;
+		inTrigger = false;
 		keyGet = false;
 		orngStoneGet = false;
 		blueStoneGet = false;
@@ -208,17 +210,18 @@ public class playerInteract: MonoBehaviour {
 	}
 
 	void changeCrossHair(){
-		if(GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true){
-			if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f)){
-				if(hit.collider.gameObject.tag == "Fire"){
-					GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
-				}
-				if(hit.collider.gameObject.tag == "letter"){
-					GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
-				}
-				if(hit.collider.gameObject.tag == "GrabbableObject" && isHolding == false){
-					GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
-				}
+		if(inTrigger){
+			GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
+		}
+		else if(Physics.Raycast(transform.position, transform.forward, out hit, 3.0f)){
+			if(hit.collider.gameObject.tag == "Fire"){
+				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
+			}
+			if(hit.collider.gameObject.tag == "letter"){
+				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
+			}
+			if(hit.collider.gameObject.tag == "GrabbableObject" && isHolding == false){
+				GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = false;
 			}
 		}
 		else{GameObject.Find ("Reticule").GetComponent<GUICrosshair> ().OriginalOn = true;}
