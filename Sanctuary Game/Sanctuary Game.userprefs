@@ -1,16 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\lvl3Activation.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CabinVanish.cs">
     <Files>
-      <File FileName="Assets\Scripts\openDoor.cs" Line="49" Column="84" />
-      <File FileName="Assets\Scripts\Highlight_Mouseover.cs" Line="57" Column="3" />
+      <File FileName="Assets\Scripts\CabinVanish.cs" Line="33" Column="4" />
+      <File FileName="Assets\Scripts\openDoor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Highlight_Mouseover.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\lvl3Activation.cs" Line="122" Column="82" />
-      <File FileName="Assets\Scripts\OpenLvl2.cs" Line="80" Column="85" />
-      <File FileName="Assets\Scripts\OpenLvl3.cs" Line="92" Column="82" />
-      <File FileName="Assets\Scripts\pullLever.cs" Line="60" Column="82" />
+      <File FileName="Assets\Scripts\OpenLvl2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\OpenLvl3.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\pullLever.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GUICrosshair.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\playerInteract.cs" Line="225" Column="82" />
-      <File FileName="Assets\Scripts\creditTrigger.cs" Line="122" Column="17" />
+      <File FileName="Assets\Scripts\playerInteract.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\creditTrigger.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

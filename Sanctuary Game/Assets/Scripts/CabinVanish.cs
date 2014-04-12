@@ -27,7 +27,9 @@ public class CabinVanish : MonoBehaviour {
 
 	void OnTriggerExit(Collider Other){
 		Debug.Log ("exit");
-		shack.SetActive (false);
-		door.SetActive (false);
+		if(Other == playerChar){
+			shack.SetActive (false);
+			door.SetActive (false);
+		}
 	}
 }
