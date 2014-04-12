@@ -126,7 +126,9 @@ public class playerInteract: MonoBehaviour {
 				break;
 			}
 
-			hitObject.rigidbody.useGravity = false; 
+			hitObject.rigidbody.useGravity = false;
+			hitObject.rigidbody.velocity = Vector3.zero;
+			hitObject.rigidbody.angularVelocity = Vector3.zero;
 			
 			//Attach the object as a child to the camera
 			hitObject.parent = this.transform;

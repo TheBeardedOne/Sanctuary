@@ -109,7 +109,7 @@ public class respawnAtCheckpoint : MonoBehaviour {
 		else if(holder.isHolding){
 			if(holder.hitObject.gameObject.name != Other.gameObject.name){
 				audio.Play ();
-				GameObject.FindGameObjectWithTag("Player").transform.position = checkpoint;
+				GameObject.Find("Character").transform.position = checkpoint;
 			}
 		}
 	}
